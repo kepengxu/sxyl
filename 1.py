@@ -14,13 +14,13 @@ def getmodel(inunit,outunit):
 
 model=getmodel(10,1)
 
-ten=TensorBoard()
+ten=TensorBoard(log_dir='./xxxx')
 
 model.compile(optimizer='sgd',loss=mse)
 
 x,y=get_data_one('/home/cooper/PycharmProjects/sxyl/Assignments/diabetes.txt')
 model.fit(x,y,
           batch_size=32,
-          epochs=10000,
+          epochs=1000,
           callbacks=[ten],
           validation_split=0.2)
