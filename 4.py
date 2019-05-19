@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler,OneHotEncoder
 from sklearn.model_selection import train_test_split
 from dataprocess import get_data_two,get_data_two
 from sklearn.metrics import precision_recall_curve,precision_score,recall_score,f1_score
-import numpy as np
+
 import keras
 from dataprocess import get_data_one
 from keras.models import Sequential,Model,Input
@@ -114,7 +114,7 @@ def run_main():
     breast_cancer = load_breast_cancer()
     data = np.array(breast_cancer.data)
     label = np.array(breast_cancer.target)
-    print data.shape,label.shape
+    print(data.shape,label.shape)
 
 if __name__=='__main__':
     gda=GDA(x_train,y_train)
